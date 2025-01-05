@@ -62,7 +62,7 @@ $powermenu = rofi -show power-menu -modi power-menu:rofi-power-menu
 
 # exec-once = $terminal
 # exec-once = nm-applet &
- exec-once = waybar & swww & firefox & mpd & wal -R & swww-daemon & vesktop
+ exec-once = waybar & swww & firefox & mpd & wal -R & swww-daemon 
 
 
 #############################
@@ -288,8 +288,8 @@ bindel = ,XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
 bindel = ,XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
 bindel = ,XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 bindel = ,XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
-bindel = ,XF86MonBrightnessUp, exec, brightnessctl s 10%+
-bindel = ,XF86MonBrightnessDown, exec, brightnessctl s 10%-
+bindel = ,XF86MonBrightnessUp, exec, brightnessctl s 5%+
+bindel = ,XF86MonBrightnessDown, exec, brightnessctl s 5%-
 
 # Requires playerctl
 bindl = , XF86AudioNext, exec, playerctl next
