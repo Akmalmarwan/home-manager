@@ -5,6 +5,8 @@
     ./hyprland/hyprland.nix
     ./kitty/kitty-conf.nix
 #    ./rofi/rofi2.nix
+    ./sway/sway.nix
+    ./sway/swaync.nix
   ];
 # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -36,6 +38,7 @@
     pkgs.pavucontrol
     pkgs.handbrake
     pkgs.brightnessctl
+    pkgs.whatsapp-for-linux
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of

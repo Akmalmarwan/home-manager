@@ -47,7 +47,7 @@ monitor=,preferred,auto,1.0
 # See https://wiki.hyprland.org/Configuring/Keywords/
 
 # Set programs that you use
-$terminal = kitty
+$terminal = foot
 $fileManager = dolphin
 $menu = rofi -show drun 
 $powermenu = rofi -show power-menu -modi power-menu:rofi-power-menu
@@ -86,10 +86,10 @@ general {
     gaps_in = 5
     gaps_out = 8 
 
-    border_size = 2
+    border_size = 3
 
     # https://wiki.hyprland.org/Configuring/Variables/#variable-types for info about colors
-    col.active_border = rgba(33ccffee) rgba(00ff99ee) 45deg
+    col.active_border = rgba(33ccffee) 
     col.inactive_border = rgba(595959aa)
 
     # Set to true enable resizing windows by clicking and dragging on borders and gaps
@@ -121,6 +121,7 @@ decoration {
         enabled = true
         size = 8
         passes = 1
+        new_optimizations = true
 
         vibrancy = 0.1696
     }
@@ -202,10 +203,13 @@ input {
 
     sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
 
-    touchpad {
-        natural_scroll = true
-        scroll_factor = 0.2
-    }
+touchpad {
+    disable_while_typing = false 
+    scroll_factor = 0.2
+    natural_scroll = true
+    tap-and-drag = true
+}
+
 }
 
 # https://wiki.hyprland.org/Configuring/Variables/#gestures
