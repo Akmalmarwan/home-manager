@@ -5,8 +5,6 @@
     ./hyprland/hyprland.nix
     ./kitty/kitty-conf.nix
 #    ./rofi/rofi2.nix
-    ./sway/sway.nix
-    ./sway/swaync.nix
   ];
 # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -95,6 +93,10 @@
       name = "Sans";
       size = 11;
     };
+  };
+  services.swaync = {
+    enable = true;
+
   };
 
 
