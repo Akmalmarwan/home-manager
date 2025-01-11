@@ -5,6 +5,7 @@
     ./hyprland/hyprland.nix
     ./kitty/kitty-conf.nix
 #    ./rofi/rofi2.nix
+    ./sway/sway.nix
   ];
 # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -73,7 +74,7 @@
     # x11.enable = true;
     package = pkgs.bibata-cursors;
     name = "Bibata-Modern-Classic";
-    size = 16;
+    size = 14;
   };
 
   gtk = {

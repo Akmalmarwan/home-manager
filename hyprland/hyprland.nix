@@ -37,7 +37,7 @@
 ################
 
 # See https://wiki.hyprland.org/Configuring/Monitors/
-monitor=,preferred,auto,1.0
+monitor=eDP-1,1920x1080@144.42Hz,auto,1.0
 
 
 ###################
