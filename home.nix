@@ -1,4 +1,12 @@
 { config, pkgs, ... }:
+  let
+  stylix = pkgs.fetchFromGitHub {
+      owner = "danth";
+      repo = "stylix";
+      rev = "...";
+      sha256 = "...";
+  };
+in 
 
 {
   imports = [
@@ -6,6 +14,7 @@
     ./kitty/kitty-conf.nix
 #    ./rofi/rofi2.nix
     ./sway/sway.nix
+#    (import stylix).homeManagerModules.stylix
   ];
 # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -37,6 +46,7 @@
     pkgs.pavucontrol
     pkgs.handbrake
     pkgs.brightnessctl
+    pkgs.autotiling
     pkgs.whatsapp-for-linux
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -124,6 +134,7 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   
+
 
   # Optional, hint Electron apps to use Wayland:
    home.sessionVariables.NIXOS_OZONE_WL = "1";

@@ -7,7 +7,7 @@
 
     enable = true;
     extraOptions = ["--unsupported-gpu"];
-    swaynag.enable = true;
+    swaynag.enable = false;
     wrapperFeatures.gtk = true;
     xwayland = true;
     extraConfig = ''
@@ -31,14 +31,32 @@ set $term foot
 # Your preferred application launcher
 set $menu rofi -show drun 
 
+default_border none
+default_floating_border none
+#font pango:monospace 0
+titlebar_padding 1
+titlebar_border_thickness 0
+
+#################
+### AUTOSTART ###
+#################
+
+exec swww-daemon
+exec mpd
+exec wal -R
+exec autotiling
+
+
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /run/current-system/sw/share/backgrounds/sway/)
 # output * bg /run/current-system/sw/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output eDP-1 scale 1.15
 #
 # Example configuration:
 #
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
+   output eDP-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
@@ -60,10 +78,19 @@ set $menu rofi -show drun
 # Example configuration:
 #
    input "1739:32382:MSNB0001:00_06CB:7E7E_Touchpad" {
-       dwt enabled
+       dwt diabled 
        tap enabled
        natural_scroll enabled
        middle_emulation enabled
+       scroll_factor 0.2
+   }
+   input "1:1:AT_Translated_Set_2_keyboard" {
+     xkb_options caps:escape,grp:alt_shift_toggle 
+     xkb_layout us,eg
+     repeat_delay 250
+     repeat_rate 50
+     
+    
    }
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
@@ -75,6 +102,15 @@ set $menu rofi -show drun
 #
     # Start a terminal
     bindsym $mod+Return exec foot 
+
+    # Start file manager 
+    bindsym $mod+e exec dolphin
+
+    # Lock screen
+    bindsym $mod+o exec swaylock -f -c 000000
+
+    # Start browser
+    bindsym $mod+w exec firefox
 
     # Kill focused window
     bindsym $mod+q kill
@@ -157,7 +193,7 @@ set $menu rofi -show drun
     # Switch the current container between different layout styles
 #    bindsym $mod+s layout stacking
 #    bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+#    bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
@@ -226,6 +262,8 @@ bindsym $mod+r mode "resize"
 # Read `man 5 sway-bar` for more information about this section.
 bar {
        swaybar_command waybar
+       hidden_state hide
+       mode invisible
     position top
 
     # When the status_command prints a new line to stdout, swaybar updates.
@@ -246,6 +284,7 @@ include /etc/sway/config.d/*
 
     };
     
+
   
 
 
