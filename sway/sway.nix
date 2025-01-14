@@ -127,7 +127,6 @@ output eDP-1 scale 1.15
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
-
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
@@ -268,7 +267,7 @@ bar {
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+#    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
 
     colors {
         statusline #ffffff
