@@ -156,7 +156,6 @@ animations {
     animation = workspacesIn, 1, 1.21, almostLinear, fade
     animation = workspacesOut, 1, 1.94, almostLinear, fade
 }
-
 # Ref https://wiki.hyprland.org/Configuring/Workspace-Rules/
 # "Smart gaps" / "No gaps when only"
 # uncomment all if you wish to use that.

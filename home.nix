@@ -1,12 +1,5 @@
 { config, pkgs, ... }:
-  let
-  stylix = pkgs.fetchFromGitHub {
-      owner = "danth";
-      repo = "stylix";
-      rev = "...";
-      sha256 = "...";
-  };
-in 
+ 
 
 {
   imports = [
@@ -14,7 +7,7 @@ in
     ./kitty/kitty-conf.nix
 #    ./rofi/rofi2.nix
     ./sway/sway.nix
-#    (import stylix).homeManagerModules.stylix
+#    ./stylix/stylix.nix
   ];
 # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -29,6 +22,7 @@ in
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "24.11"; # Please read the comment before changing.
+
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -48,6 +42,8 @@ in
     pkgs.brightnessctl
     pkgs.autotiling
     pkgs.whatsapp-for-linux
+    pkgs.pomodoro
+    pkgs.gnome-pomodoro
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of

@@ -1,8 +1,7 @@
 { config, pkgs, lib, ... }:
 
+
 {
-
-
   wayland.windowManager.sway = {
 
     enable = true;
@@ -52,7 +51,7 @@ exec autotiling
 #
 # Default wallpaper (more resolutions are available in /run/current-system/sw/share/backgrounds/sway/)
 # output * bg /run/current-system/sw/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output eDP-1 scale 1.15
+# output eDP-1 scale 1.15
 #
 # Example configuration:
 #
@@ -253,8 +252,9 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
-    bindsym Print exec grim
-
+    bindsym Print exec grim - | wl-copy
+    bindsym Shift+Print exec grim -g "$(slurp)" - | wl-copy
+    bindsym $mod+Print exec grim -g "$(swaymsg -t get_tree | jq -j '.. | select(.type?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"')" - | wl-copy
 #
 # Status Bar:
 #
