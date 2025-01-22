@@ -37,7 +37,9 @@
     pkgs.eww
     pkgs.mindustry-wayland
     pkgs.hyprpicker
+    pkgs.colorstorm
     pkgs.pavucontrol
+    pkgs.wpgtk
     pkgs.handbrake
     pkgs.brightnessctl
     pkgs.autotiling

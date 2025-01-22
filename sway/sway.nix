@@ -6,8 +6,8 @@
 
     enable = true;
     extraOptions = ["--unsupported-gpu"];
-    swaynag.enable = false;
-    wrapperFeatures.gtk = true;
+    swaynag.enable = true;
+    wrapperFeatures.gtk = false;
     xwayland = true;
     extraConfig = ''
     # Default config for sway
@@ -63,10 +63,10 @@ exec autotiling
 #
 # Example configuration:
 #
- exec swayidle -w \
-          timeout 300 'swaylock -f -c 000000' \
-          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-          before-sleep 'swaylock -f -c 000000'
+# exec swayidle -w \
+#          timeout 300 'swaylock -f -c 000000' \
+#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+#          before-sleep 'swaylock -f -c 000000'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -106,7 +106,7 @@ exec autotiling
     bindsym $mod+e exec dolphin
 
     # Lock screen
-    bindsym $mod+o exec swaylock -f -c 000000
+#    bindsym $mod+o exec swaylock -f -c 000000
 
     # Start browser
     bindsym $mod+w exec firefox
