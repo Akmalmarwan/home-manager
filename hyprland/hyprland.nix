@@ -47,7 +47,7 @@ monitor=eDP-1,1920x1080@144.42Hz,auto,1.0
 # See https://wiki.hyprland.org/Configuring/Keywords/
 
 # Set programs that you use
-$terminal = foot
+$terminal = kitty 
 $fileManager = dolphin
 $menu = rofi -show drun 
 $powermenu = rofi -show power-menu -modi power-menu:rofi-power-menu
