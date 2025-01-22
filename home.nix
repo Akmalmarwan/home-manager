@@ -35,8 +35,7 @@
     pkgs.pfetch
     pkgs.nerdfonts
     pkgs.eww
-    pkgs.mindustry-wayland
-    pkgs.hyprpicker
+    pkgs.mindustry-wayland pkgs.hyprpicker
     pkgs.colorstorm
     pkgs.pavucontrol
     pkgs.wpgtk

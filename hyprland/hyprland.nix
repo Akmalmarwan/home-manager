@@ -224,9 +224,9 @@ $mainMod = SUPER # Sets "Windows" key as main modifier
 
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
 bind = $mainMod, RETURN, exec, $terminal
-#bind = $mainMod_SHIFT, RETURN, exec, foot -w 800x500
-bind = $mainMod_SHIFT, RETURN, exec, [silent;float] foot 
+#bind = $mainMod_SHIFT, RETURN, exec, [silent;float;center] $terminal 
 bind = $mainMod, Q, killactive,
+bind = $mainMod SHIFT, N, exec, kitty -e nvim
 bind = $mainMod, M, exit,
 bind = $mainMod, E, exec, $fileManager
 bind = $mainMod, SPACE, togglefloating,
@@ -236,6 +236,7 @@ bind = $mainMod, F, fullscreen
 bind = $mainMod, W, exec, firefox
 #bind = $mainMod, P, pseudo, # dwindle
 #bind = $mainMod, J, togglesplit, # dwindle
+bind = $mainMod, T, exec, waypaper 
 
 # Move focus with mainMod + vim keys
 bind = $mainMod, h, movefocus, l
