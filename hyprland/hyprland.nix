@@ -234,6 +234,7 @@ bind = $mainMod, D, exec, $menu
 bind = $mainMod, X, exec, $powermenu 
 bind = $mainMod, F, fullscreen
 bind = $mainMod, W, exec, firefox
+bind = $mainMod, O, exec, obsidian 
 #bind = $mainMod, P, pseudo, # dwindle
 #bind = $mainMod, J, togglesplit, # dwindle
 bind = $mainMod, T, exec, waypaper 

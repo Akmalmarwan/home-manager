@@ -35,7 +35,7 @@
     pkgs.pfetch
     pkgs.nerdfonts
     pkgs.eww
-    pkgs.mindustry-wayland pkgs.hyprpicker
+    pkgs.mindustry-wayland
     pkgs.colorstorm
     pkgs.pavucontrol
     pkgs.wpgtk
@@ -44,7 +44,10 @@
     pkgs.autotiling
     pkgs.whatsapp-for-linux
     pkgs.pomodoro
+    pkgs.tty-clock
     pkgs.gnome-pomodoro
+    pkgs.hyprpicker
+    pkgs.hyprlock
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
