@@ -117,6 +117,9 @@ exec autotiling
     # Start your launcher
     bindsym $mod+d exec $menu
 
+    # Start waypaper
+    bindsym $mod+t exec waypaper
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.

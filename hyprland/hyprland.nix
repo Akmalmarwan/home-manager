@@ -62,7 +62,7 @@ $powermenu = rofi -show power-menu -modi power-menu:rofi-power-menu
 
 # exec-once = $terminal
 # exec-once = nm-applet &
- exec-once = waybar & swww & firefox & mpd & wal -R & swww-daemon 
+ exec-once = waybar & swww & firefox & mpd & swww-daemon 
 
 
 #############################
