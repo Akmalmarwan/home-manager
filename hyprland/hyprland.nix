@@ -4,6 +4,9 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
+    settings.exec-once = [
+      "${pkgs.hyprpanel}/bin/hyprpanel"
+    ]
     systemd.variables = ["--all"];
     systemd.enable = true;
     extraConfig = ''
